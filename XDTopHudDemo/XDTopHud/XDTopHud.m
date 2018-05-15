@@ -168,9 +168,10 @@
     [hud.dismissTimer invalidate];
     hud.dismissTimer = nil;
     // init new timer
-    NSTimer *timer = [NSTimer timerWithTimeInterval:3 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        [XDTopHud dismissHud];
-    }];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:3 target:[XDTopHud class] selector:@selector(dismissHud) userInfo:nil repeats:NO];
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:3 repeats:NO block:^(NSTimer * _Nonnull timer) {
+//        [XDTopHud dismissHud];
+//    }];
     hud.dismissTimer = timer;
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
