@@ -11,7 +11,7 @@
 
 #define ZHN_HUD_IS_IPHONEX (K_SCREEN_HEIGHT == 812)
 #define KStatusBarFitHeight (ZHN_HUD_IS_IPHONEX ? 20 : 0)
-#define KHudContentHeight 36
+#define KHudContentHeight 44
 #define KHudHeight (KHudContentHeight + KStatusBarFitHeight)
 #define KHudPaddingVertical 20
 #define KHudPaddingHorizon 8
